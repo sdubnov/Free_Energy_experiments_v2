@@ -8,6 +8,7 @@ Created on Tue Apr 10 11:48:09 2018
 
 import tensorflow as tf
 import numpy as np
+import tensorflow_probability as tfp
 
 class free_agent:
     
@@ -60,7 +61,7 @@ class free_agent:
         total = tf.multiply(tf.cast(success_vector,tf.float32),self.strategy)
         
         ## define normal distribution:
-        dist = tf.distributions.Normal(self.basic_needs,1.0)
+        dist = tfp.distributions.Normal(self.basic_needs,1.0)
         
         
         return dist.log_prob(total)
