@@ -63,6 +63,6 @@ class free_agent:
         ## define normal distribution:
         dist = tfp.distributions.Normal(self.basic_needs,1.0)
         
-        print(total,dist.log_prob(total)
+        print(total,dist.log_prob(total))
               
         return dist.log_prob(total)
